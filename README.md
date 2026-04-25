@@ -73,7 +73,6 @@ uv add wandb hydra-core omegaconf
 | 실험 추적 | WandB |
 | 코드 버전 관리 | GitHub |
 | 문서 / 회의록 | Notion |
-| 논문 타깃 | MICCAI, TMI, MedIA ... |
 
 ### WandB 초기화 표준
 
@@ -179,11 +178,10 @@ python train.py train.lr=1e-3 +exp=ablation_01
 
 | 항목 | 규칙 | 예시 |
 |------|------|------|
-| 파일명 | `snake_case` | `vq_vae_encoder.py` |
+| 파일명 | `snake_case` | `vqvae_encoder.py` |
 | 클래스 | `PascalCase` | `VQVAEEncoder` |
-| 함수/변수 | `snake_case` | `forward_pass` |
+| 함수/변수 | `snake_case` | `setup_dataloader` |
 | 상수 | `UPPER_SNAKE` | `MAX_EPOCH` |
-| WandB run name | `{model}_{exp_id}` | `uvit_cpr4_n3` |
 
 ---
 
