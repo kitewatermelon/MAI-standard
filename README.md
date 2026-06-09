@@ -198,6 +198,21 @@ python train.py train.lr=1e-3 +exp=ablation_01
 
 > AGENT.md는 LLM이 MAI 표준에 맞는 코드를 생성하도록 유도하는 안전장치 역할을 한다.
 
+## IN1k
+MAI 서버에는 IN1k가 저장되어 있으며, 위치와 불러오는 방법은 다음과 같다. 반드시 참고하여, in1k가 중복 저장되는 일이 없도록 한다.
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset(
+    "ILSVRC/imagenet-1k",
+    cache_dir="/data/imagenet-1k",
+    trust_remote_code=True,
+)
+
+print(ds)
+```
+
 ---
 
 ## 참고 링크
